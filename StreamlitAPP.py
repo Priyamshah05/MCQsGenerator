@@ -5,11 +5,11 @@ import traceback
 import pandas as pd
 from dotenv import load_dotenv
 from src.mcqsgenerator.utils import read_file, get_table_data
-from langchain.callbacks import get_openai_callback
+from langchain_community.callbacks.manager import get_openai_callback
 from src.mcqsgenerator.MCQsGenerator import generate_evaluate_chain
 from src.mcqsgenerator.logger import logging
 
-with open('/Users/priyamshah/MCQsGenerator/Response.json', 'r') as file:
+with open('Response.json', 'r') as file:
     RESPONSE_JSON = json.load(file)
 
 st.title("MCQs Creator Application with LangChain 🎓📚")
